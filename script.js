@@ -94,7 +94,21 @@ function renderNews(newsData) {
         return;
     }
 
+    // 重要アイテムと通常アイテムを分ける
+    const importantItems = [];
+    const normalItems = [];
+
     newsData.forEach(item => {
+        if (item['タイトル'].includes('【重要】')) {
+            importantItems.push(item);
+        } else {
+            normalItems.push(item);
+        }
+    });
+
+    const sortedData = [...importantItems, ...normalItems];
+
+    sortedData.forEach(item => {
         const li = document.createElement('li');
         li.className = 'news-item';
         
@@ -105,14 +119,25 @@ function renderNews(newsData) {
         const titleSpan = document.createElement('span');
         titleSpan.className = 'news-title';
         
+        let titleText = item['タイトル'];
+        const isImportant = titleText.includes('【重要】');
+        
+        if (isImportant) {
+            titleText = titleText.replace('【重要】', '').trim();
+            const badge = document.createElement('span');
+            badge.className = 'badge-important';
+            badge.textContent = '重要';
+            titleSpan.appendChild(badge);
+        }
+        
         if (item['リンクURL'] && item['リンクURL'].trim() !== '') {
             const a = document.createElement('a');
             a.href = item['リンクURL'];
             a.target = '_blank';
-            a.textContent = item['タイトル'];
+            a.textContent = titleText;
             titleSpan.appendChild(a);
         } else {
-            titleSpan.textContent = item['タイトル'];
+            titleSpan.appendChild(document.createTextNode(titleText));
         }
 
         li.appendChild(dateSpan);

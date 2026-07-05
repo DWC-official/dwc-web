@@ -127,7 +127,7 @@ h1, h2, h3, h4, .logo {
 
 .logo a {
     font-size: 1.75rem;
-    color: var(--color-primary);
+    color: var(--color-accent);
     letter-spacing: 0.05em;
 }
 
@@ -201,7 +201,7 @@ h1, h2, h3, h4, .logo {
     transition: var(--transition-fast);
 }
 
-/* Hero Section */
+/* Hero Section (Index) */
 .hero {
     position: relative;
     height: 100vh;
@@ -210,19 +210,61 @@ h1, h2, h3, h4, .logo {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('assets/hero_bg.png') no-repeat center center/cover;
-    background-color: var(--color-primary); /* fallback */
     padding: 0 24px;
     margin-top: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/bg-index.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-primary); /* fallback */
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Split Header Layout (Subpages) */
+.page-header-split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding-top: 80px; /* Account for fixed header */
+    min-height: 350px;
+}
+
+.header-text {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-image {
+    flex: 1;
+    display: flex;
+}
+
+.header-image img {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .page-header-split {
+        flex-direction: column;
+    }
+    
+    .header-text {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .header-image {
+        width: 100%;
+    }
 }
 
 .hero-content {
@@ -1196,6 +1238,17 @@ h1, h2, h3, h4, .logo {
     color: var(--color-text);
     line-height: 1.7;
     margin-bottom: 24px;
+}
+.badge-important {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 .health-info-contact {
     background-color: var(--color-bg-light);

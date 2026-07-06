@@ -1127,6 +1127,38 @@ h1, h2, h3, h4, .logo {
     color: var(--color-white);
 }
 
+/* Info Box */
+.info-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--color-accent);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+.info-box h3 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+.info-box p {
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+.info-box ul {
+    list-style-type: none;
+    margin-bottom: 16px;
+    padding-left: 8px;
+}
+.info-box ul li {
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+.info-box .text-small {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;

@@ -1,4 +1,4 @@
-// 1. ここに先ほどコピーしたAPIのURLを貼り付けます（シングルクォーテーション '' の間に）
+// 1. APIのURLを貼り付けます（シングルクォーテーション '' の間に）
 const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbxUWlafN3CJrWzT12Pgv28TJebePl9SCg5a1eI_MmJPyP-lNH3gFaw8xZ3z9DMd9_g7/exec';
 
 document.addEventListener('DOMContentLoaded', () => {

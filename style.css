@@ -275,6 +275,8 @@ h1, h2, h3, h4, .logo {
 }
 
 .hero-title {
+    font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
     font-size: 3.5rem;
     margin-bottom: 24px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);

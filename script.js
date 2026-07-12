@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (GAS_API_URL && GAS_API_URL !== 'あなたのウェブアプリのURLをここに貼り付けてください') {
         fetchGASData();
     }
+
+    // --- スクロールアニメーションの初期化 ---
+    initScrollAnimation();
 });
 
 // モバイルメニューの制御
@@ -175,4 +178,35 @@ function renderSchedule(scheduleData) {
         li.appendChild(titleSpan);
         scheduleList.appendChild(li);
     });
+}
+
+// スクロール連動アニメーション（Intersection Observer）
+function initScrollAnimation() {
+    // '.fade-in-scroll' クラスを持つすべての要素を取得
+    const scrollElements = document.querySelectorAll('.fade-in-scroll');
+    if (scrollElements.length === 0) return;
+
+    // 画面内に入ったときの処理
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            // 要素が画面の15%以上入ったら
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // 一度表示されたら監視を解除（何度もフワフワさせない）
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Observerの設定（画面の下から15%入ったところで発火）
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -15% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // 各要素を監視対象に追加
+    scrollElements.forEach(el => observer.observe(el));
 }

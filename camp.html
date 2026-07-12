@@ -25,37 +25,169 @@
     <div id="header-container"></div>
 
     <main>
-        <!-- Page Header -->
+        <!-- Camp Hero Section -->
         <section class="page-header-split">
             <div class="header-text">
-                <h1 class="page-title fade-in-up">キャンプ特設（公募キャンプ）</h1>
+                <p style="font-size: 1rem; font-weight: bold; color: var(--color-accent); margin-bottom: 8px; letter-spacing: 0.1em;">公募キャンプ特設</p>
+                <h1 class="page-title fade-in-up" style="font-family: 'Zen Maru Gothic', sans-serif; font-size: 2.2rem; line-height: 1.4;">全員がキャンプマスター<br><span style="font-size: 1.4rem; font-weight: normal; display: block; margin-top: 8px; color: rgba(255,255,255,0.9);">誰かのために何ができるか？</span></h1>
             </div>
             <div class="header-image">
                 <img src="assets/bg-camp.png" alt="キャンプ特設（公募キャンプ）">
             </div>
         </section>
 
-        <!-- Intro/Trust Section -->
-        <section class="camp-intro section-padding">
+        <!-- Quick Links (スマホ対策の目次) -->
+        <div class="quick-links-wrapper" style="background-color: var(--color-white); padding: 20px 0; border-bottom: 1px solid var(--color-bg-light); position: sticky; top: 70px; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <div class="container" style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                <a href="#philosophy" class="btn-quick">私たちの想い ↓</a>
+                <a href="#strengths" class="btn-quick">4つの強み ↓</a>
+                <a href="#schedule" class="btn-quick">スケジュール ↓</a>
+                <a href="#overview" class="btn-quick">募集概要 ↓</a>
+                <a href="#cta-section" class="btn-quick" style="background-color: var(--color-accent); color: var(--color-white); border-color: var(--color-accent);">お申し込み ↓</a>
+            </div>
+        </div>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy-section section-padding">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header">
+                    <h2 class="section-title">Philosophy</h2>
+                    <p class="section-subtitle">キャンプにかける私たちの想い</p>
+                </div>
+                <div class="philosophy-card" style="margin-bottom: 32px; background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-accent);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 12px;">■ 子どもたちへの約束（Mission）</h3>
+                    <p>子どもたちに、仲間と共に新しいことへ挑戦する経験を届け、自己効力感と自信を育むこと。</p>
+                </div>
+                <div class="philosophy-card" style="margin-bottom: 32px; background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-primary);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 12px;">■ 保護者の皆様へ（Vision）</h3>
+                    <p>すべての子どもが「またチャレンジしたい」と笑顔で家に帰り、保護者の方が安心してお子様を預けられ、少しでも心と体を休められる場をつくること。</p>
+                </div>
+                <div class="philosophy-card" style="background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-secondary);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 16px;">■ DWCが大切にしている4つのこと</h3>
+                    <ul class="value-list" style="padding-left: 20px;">
+                        <li style="margin-bottom: 12px;"><strong>主体性を引き出す：</strong> 大人が答えを与えるのではなく、子どもたち自身が考え、仲間と協力して行動できる環境をつくります。</li>
+                        <li style="margin-bottom: 12px;"><strong>挑戦を後押しする：</strong> 失敗を恐れず新しいことに挑戦できるよう、安心して挑める土台（安全管理・見守り体制）を整えます。</li>
+                        <li style="margin-bottom: 12px;"><strong>本気で向き合う：</strong> 大学生ならではの体力と熱量で、子どもたち一人ひとりに全力で向き合います。</li>
+                        <li><strong>信頼をつなぐ：</strong> 保護者・学校・地域との30年以上の関係を大切にし、安心して託していただける存在であり続けます。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strengths Section -->
+        <section id="strengths" class="strengths-section section-padding bg-light">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Message</h2>
-                    <p class="section-subtitle">プロデューサーからのご挨拶</p>
+                    <h2 class="section-title">Why Choose Us?</h2>
+                    <p class="section-subtitle">DWCの公募キャンプ 4つの強み</p>
                 </div>
-                <div class="intro-message-box" style="margin-bottom: 32px;">
-                    <p>2020年、新型コロナウイルスの影響でサークル主催のキャンプ開催を見合わせて以来、私たちは京都市の消防団様や小学校様と共同でキャンプ運営に携わらせていただいてまいりました。お子様や保護者の皆様から大変ご満足いただく一方で、参加人数の制限もあり『自分たちの手でキャンプを主催し、もっと多くの子どもたちに笑顔を届けたい』という声がサークル内で大きくなりました。本年度はサークル員も増え、満を持して公募キャンプを開催する運びとなりました。</p>
+                <div class="strengths-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <div class="strength-card fade-in-scroll">
+                        <div class="strength-number">01</div>
+                        <h3>30年以上の信頼と実績</h3>
+                        <p>京都市教育委員会・花背山の家と30年以上提携。毎年消防署と協力し、京都市内の小学校からも実習を依頼される関係性を構築。これまで大きな事故・トラブルは一切ありません。</p>
+                    </div>
+                    <div class="strength-card fade-in-scroll">
+                        <div class="strength-number">02</div>
+                        <h3>手厚い安全体制</h3>
+                        <p>子ども30名に対し大学生スタッフ35名を配置。1班（6名）に対しカウンセラーが3名付き添います。ナースの専任配置や、貸切バスへのスタッフ同乗など安全には万全を期しています。</p>
+                    </div>
+                    <div class="strength-card fade-in-scroll">
+                        <div class="strength-number">03</div>
+                        <h3>大学生ならではの熱量</h3>
+                        <p>体力と若さを活かし、本気で子どもと遊びます。節目ごとに計7回のオリジナルストーリー劇を行い「仲間の大切さ」を伝えるなど、花背山ならではの体験型プログラムを用意しています。</p>
+                    </div>
+                    <div class="strength-card fade-in-scroll">
+                        <div class="strength-number">04</div>
+                        <h3>非営利・透明性</h3>
+                        <p>参加費は食費や保険料などの実費（運営費用）のみに使用し、学生の利益は一切いただきません。また、写真やSNSの取り扱いルールを厳格に明文化し、プライバシーをお守りします。</p>
+                    </div>
                 </div>
-                <div class="cta-button-wrapper" style="text-align: center;">
-                    <p class="policy-alert" style="text-align: center; font-size: 0.95rem; margin-bottom: 12px; color: var(--color-text);">
-                        ※お申し込みの前に、必ず当団体の<a href="privacy.html" style="color: var(--color-primary); font-weight: bold; text-decoration: underline; margin: 0 4px;">プライバシーポリシー（個人情報保護方針）</a>をご確認・ご同意ください。
-                    </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-pl0cuArGkI8DJMb-VHgwIEUmC-CeSbwYI_lIG8V8xoAQcA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-large btn-accent">公募キャンプへのお申し込みはこちら</a>
+            </div>
+        </section>
+
+        <!-- Mid CTA Section -->
+        <div class="mid-cta-wrapper" style="text-align: center; padding: 60px 24px; background-color: var(--color-white);">
+            <p class="policy-alert" style="text-align: center; font-size: 0.95rem; margin-bottom: 12px; color: var(--color-text);">
+                ※お申し込みの前に、必ず当団体の<a href="privacy.html" style="color: var(--color-primary); font-weight: bold; text-decoration: underline; margin: 0 4px;">プライバシーポリシー（個人情報保護方針）</a>をご確認・ご同意ください。
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-pl0cuArGkI8DJMb-VHgwIEUmC-CeSbwYI_lIG8V8xoAQcA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-large btn-accent">公募キャンプへのお申し込みはこちら</a>
+        </div>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-timeline-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Schedule</h2>
+                    <p class="section-subtitle">2日間のタイムスケジュール</p>
+                </div>
+                
+                <div class="timeline-wrapper">
+                    <h3 class="day-title">1日目（9月21日）</h3>
+                    <div class="timeline-container">
+                        <div class="timeline-item"><div class="time">10:00</div><div class="content">宝ヶ池通 京都国際会館バス停前 集合</div></div>
+                        <div class="timeline-item"><div class="time">11:00</div><div class="content">花背山の家 到着</div></div>
+                        <div class="timeline-item"><div class="time">12:00</div><div class="content">昼食</div></div>
+                        <div class="timeline-item"><div class="time">13:20</div><div class="content">入村式</div></div>
+                        <div class="timeline-item"><div class="time">13:40</div><div class="content">アイスブレイク</div></div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="time">14:00</div>
+                            <div class="content card-content fade-in-scroll">
+                                <h4>ウォークラリー</h4>
+                                <img src="assets/walkrally.jpg" alt="ウォークラリー" class="timeline-img">
+                                <p>地図を見ながら施設内の約10か所のミッションポイントを巡り、クイズやミッションに挑戦してキーワードを集めるチーム対抗イベントです。集めたキーワードから答えを導き出し、制限時間内に正解したチームには景品をプレゼント！仲間と協力して景品獲得を目指そう！</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="time">16:00</div>
+                            <div class="content card-content fade-in-scroll">
+                                <h4>野外炊事</h4>
+                                <img src="assets/cook.jpg" alt="野外炊事" class="timeline-img">
+                                <p>みんなで役割を分担しながら、協力してカレーを作る活動です。スタッフが安全を見守りながら、子どもたちが自分たちで考えて楽しく取り組めるようサポートします。後片付けまで協力して行うことで、達成感と感謝の気持ちを育みます。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="time">19:00</div>
+                            <div class="content card-content fade-in-scroll">
+                                <h4>キャンプファイヤー</h4>
+                                <img src="assets/campfire.jpg" alt="キャンプファイヤー" class="timeline-img">
+                                <p>みんなで火を囲み、「猛獣狩りに行こうよ」や「貨物列車シュッシュッシュ」などのレクリエーションを楽しみながら、仲間との絆を深めるイベントです。笑顔あふれる、キャンプの思い出に残るひとときを過ごしましょう。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item"><div class="time">20:00</div><div class="content">お風呂</div></div>
+                        <div class="timeline-item"><div class="time">21:30</div><div class="content">就寝</div></div>
+                    </div>
+
+                    <h3 class="day-title" style="margin-top: 64px;">2日目（9月22日）</h3>
+                    <div class="timeline-container">
+                        <div class="timeline-item"><div class="time">06:45</div><div class="content">起床</div></div>
+                        <div class="timeline-item"><div class="time">07:45</div><div class="content">朝の集い</div></div>
+                        <div class="timeline-item"><div class="time">08:00</div><div class="content">朝食</div></div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="time">09:30</div>
+                            <div class="content card-content">
+                                <h4>大運動会</h4>
+                                <img src="assets/sports.jpg" alt="運動会" class="timeline-img fade-in-scroll">
+                                <p>縄跳びやドッジボール、しっぽ取り、リレーなど、さまざまな競技をみんなで楽しむイベントです。スタッフは安全に十分配慮し、救急キットを携帯しながら活動を見守ります。仲間と協力し、体を思いきり動かしながら楽しい思い出を作りましょう。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item"><div class="time">13:00</div><div class="content">昼食</div></div>
+                        <div class="timeline-item"><div class="time">14:20</div><div class="content">退村式</div></div>
+                        <div class="timeline-item"><div class="time">15:00</div><div class="content">バス乗車</div></div>
+                        <div class="timeline-item"><div class="time">16:00</div><div class="content">宝ヶ池通 京都国際会館バス停前 解散</div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Camp Overview Section -->
-        <section class="camp-overview section-padding bg-light">
+        <section id="overview" class="camp-overview section-padding bg-light">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Overview</h2>
@@ -66,10 +198,12 @@
                     <h3>📢 保護者説明会（事前説明会）の開催について</h3>
                     <p>キャンプの安全管理体制や当日のプログラム内容について、保護者の皆様へ向けた説明会を実施いたします。ご不安な点やご質問にも直接お答えします。</p>
                     <ul>
-                        <li><strong>第1回：</strong> 8月30日（日） 時間・場所は後日ご案内</li>
-                        <li><strong>第2回：</strong> 9月7日（月） 時間・場所は後日ご案内</li>
+                        <li><strong>第1回：</strong> 8月1日（土） 16:00～21:00</li>
+                        <li><strong>第2回：</strong> 8月8日（土） 16:00～21:00</li>
+                        <li><strong>第3回：</strong> 8月30日（日） 16:00～21:00</li>
+                        <li><strong>第4回：</strong> 9月7日（月） 18:00～21:00</li>
                     </ul>
-                    <p class="text-small">※両日とも同じ内容を実施します。参加方法などの詳細につきましては、お申し込み完了後に別途ご案内いたします。<br>※説明会の日程にご都合がつかない場合は、個別に対応させていただきますのでご安心ください。</p>
+                    <p >会場：京都府京都市上京区新町通今出川上ル　同志社大学新町学生会館540号室<br>全日とも同じ内容を実施します。<br>※説明会の日程にご都合がつかない場合は、個別に対応させていただきますのでご安心ください。</p>
                 </div>
 
                 <div class="overview-content">
@@ -101,7 +235,7 @@
                             </tr>
                             <tr>
                                 <th>申込締切日</th>
-                                <td>2026年8月10日（定員に達し次第終了）</td>
+                                <td>2026年9月7日（定員に達し次第終了）</td>
                             </tr>
                         </tbody>
                     </table>
@@ -122,7 +256,7 @@
                         <h3 class="feature-title">徹底した見守りと救護体制</h3>
                         <ul class="safety-list" style="margin-top: 0; padding-top: 0; border: none;">
                             <li>小児対象の<strong>普通救命講習Ⅲ修了者2名を配置</strong>。</li>
-                            <li>大学生スタッフ30名以上がお子様30名を見守る体制を整え、節目ごとの人数確認を徹底します。</li>
+                            <li>大学生スタッフ30名以上がお子様30名を見守る体制を整え、節目ごとの人数確認、常時体調の留意をすることを徹底します。</li>
                         </ul>
                     </div>
                     <div class="feature-card">
@@ -181,7 +315,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>基本的に雨天でもキャンプは決行いたします。炊事場には屋根が備えられており、雨天時は施設内でのレクリエーションに切り替えて実施いたします。</p>
+                            <p>基本的に雨天でもキャンプは決行いたします。炊事場には屋根が備えられており、雨天時は施設内でのレクリエーションに切り替えて実施いたします。<br>ただし、台風などの警報や熊が出て花背山の家が休業となった場合は中止する場合もございます。</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -190,7 +324,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>1班6人のお子様に対し、カウンセラー（子ども付きスタッフ）3名が付く体制です。それ以外にも運営スタッフが多数おりますので、安心してお過ごしいただけます。</p>
+                            <p>1班6人のお子様に対し、カウンセラー（子ども付きスタッフ）2名が付く体制です。それ以外にも運営スタッフが多数おりますので、安心してお過ごしいただけます。</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -208,7 +342,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>施設内に大浴場・中浴場・小浴場が備えられています。</p>
+                            <p>施設内に大浴場・中浴場・小浴場が備えられています。<br>トイレは各棟に設置されており、清潔な状態を維持しています。</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -217,7 +351,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>どうしても必要な場合は、お子様と連絡を取ることが可能です。</p>
+                            <p>どうしても必要な場合は、当サークルを介してお子様と連絡を取ることが可能です。</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -235,7 +369,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>初めて親元を離れるお子様でも、1班6人に対しカウンセラー3名が付く体制に加え、他にも多くの運営スタッフがおりますので、きめ細やかにサポートいたします。</p>
+                            <p>初めて親元を離れるお子様でも、1班6人に対しカウンセラー2名が付く体制に加え、他にも多くの運営スタッフがおりますので、きめ細やかにサポートいたします。</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -262,7 +396,7 @@
                             <span class="accordion-icon"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>キャンセルは1か月前までご対応可能です。それ以降のキャンセルは全額のご負担となります。</p>
+                            <p>キャンセルは2週間前までご対応可能です。それ以降のキャンセルは全額のご負担となります。<br>※キャンセルの際は、必ずお手数ですがお問い合わせください。<br>天候やこちらの事情で中止となった場合のキャンセルは、全額返金いたします。</p>
                         </div>
                     </div>
                 </div>
@@ -270,7 +404,7 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section section-padding bg-light">
+        <section id="cta-section" class="cta-section section-padding bg-light">
             <div class="container text-center">
                 <!-- Health Info Box -->
                 <div class="health-info-box">
@@ -307,5 +441,12 @@
     <div id="footer-container"></div>
 
     <script src="script.js"></script>
+
+    <!-- Floating CTA for Mobile -->
+    <div class="floating-cta">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-pl0cuArGkI8DJMb-VHgwIEUmC-CeSbwYI_lIG8V8xoAQcA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-floating">
+            公募キャンプに申し込む ＞
+        </a>
+    </div>
 </body>
 </html>

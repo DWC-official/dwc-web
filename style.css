@@ -1292,3 +1292,251 @@ h1, h2, h3, h4, .logo {
     color: var(--color-text-light);
     line-height: 1.6;
 }
+
+/* ==========================================================================
+   Camp Page LP Enhancements (Phase 3)
+   ========================================================================== */
+
+/* 1. Quick Links (目次チップ) */
+.quick-links-wrapper {
+    transition: var(--transition-normal);
+}
+.btn-quick {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    border: 1px solid rgba(59, 95, 65, 0.2);
+    border-radius: 50px;
+    transition: var(--transition-fast);
+}
+.btn-quick:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 2. Strengths Card Grid */
+.strengths-grid {
+    margin-top: 40px;
+}
+.strength-card {
+    background-color: var(--color-white);
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--color-accent);
+    transition: var(--transition-normal);
+}
+.strength-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+.strength-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(243, 156, 18, 0.1);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-family: var(--font-heading);
+}
+.strength-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+.strength-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* 3. Timeline Schedule */
+.timeline-wrapper {
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+}
+.day-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    background-color: var(--color-bg-light);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+.timeline-container {
+    position: relative;
+    padding-left: 32px;
+    border-left: 3px solid var(--color-primary-light);
+    margin-left: 20px;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: 3px solid var(--color-primary);
+    z-index: 2;
+}
+.timeline-item.highlight::before {
+    width: 16px;
+    height: 16px;
+    left: -41px;
+    top: 8px;
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-white);
+    box-shadow: 0 0 0 3px var(--color-primary);
+}
+.timeline-item .time {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-secondary);
+    min-width: 60px;
+    padding-top: 2px;
+}
+.timeline-item .content {
+    font-size: 1.05rem;
+    color: var(--color-text);
+}
+.timeline-item .card-content {
+    background: var(--color-white);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    border-left: 4px solid var(--color-accent);
+}
+.timeline-item .card-content h4 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+.timeline-img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-sm);
+}
+.timeline-item .card-content p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* 4. Floating CTA (スマホ用固定ボタン) */
+.floating-cta {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 400px;
+    z-index: 999;
+    display: none; /* デフォルトは非表示（PC環境） */
+}
+.btn-floating {
+    display: block;
+    background-color: var(--color-accent);
+    color: var(--color-white) !important;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(243, 156, 18, 0.4);
+    transition: var(--transition-normal);
+}
+.btn-floating:hover {
+    background-color: #d67118;
+    transform: scale(1.02);
+}
+
+/* 5. Responsive Optimization for New Elements */
+@media (max-width: 768px) {
+    .camp-hero h1 {
+        font-size: 2.2rem !important;
+    }
+    .camp-hero h1 span {
+        font-size: 1.3rem !important;
+    }
+    .quick-links-wrapper {
+        top: 60px; /* Adjust for mobile header height */
+        padding: 12px 0;
+    }
+    .btn-quick {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+    .timeline-container {
+        margin-left: 10px;
+    }
+    .timeline-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .timeline-item .time {
+        font-size: 0.9rem;
+    }
+    /* スマホ環境のみ追従ボタンを表示 */
+    .floating-cta {
+        display: block;
+    }
+    /* 追従ボタンと被らないように最下部に余白を追加 */
+    body {
+        padding-bottom: 80px;
+    }
+}
+
+/* ==========================================================================
+   Scroll Animation Classes (Phase 2)
+   ========================================================================== */
+
+/* 初期状態（透明で少し下に下がっている状態） */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 画面内に入った時の状態（不透明になり元の位置に戻る） */
+.fade-in-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 強みカード（グリッド）表示時の時間差演出（ディレイ） */
+.strengths-grid .strength-card:nth-child(1) { transition-delay: 0s; }
+.strengths-grid .strength-card:nth-child(2) { transition-delay: 0.15s; }
+.strengths-grid .strength-card:nth-child(3) { transition-delay: 0.3s; }
+.strengths-grid .strength-card:nth-child(4) { transition-delay: 0.45s; }
+
+/* スマホ表示時はディレイを解除（縦1列になるため順番にフェードインさせる） */
+@media (max-width: 768px) {
+    .strengths-grid .strength-card {
+        transition-delay: 0s !important;
+    }
+}

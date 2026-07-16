@@ -29,6 +29,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 160px; /* 固定ヘッダーと目次の高さ分だけジャンプの着地位置を下げる */
 }
 
 body {
@@ -1783,7 +1784,7 @@ h1, h2, h3, h4, .logo {
 @media (max-width: 768px) {
     /* 目次枠の被り防止と位置調整 */
     .quick-links-wrapper {
-        top: 60px; /* スマホヘッダーの高さに合わせる */
+        top: 70px; /* 60pxから70pxに修正（ヘッダーの実際の高さに合わせる） */
         padding: 12px 0;
         background-color: var(--color-white); /* 完全に不透明にする */
         z-index: 990; /* 最前面へ（ヘッダーよりは下） */

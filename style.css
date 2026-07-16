@@ -867,12 +867,12 @@ h1, h2, h3, h4, .logo {
 .cta-title {
     font-size: 2.5rem;
     margin-bottom: 16px;
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 .cta-desc {
     font-size: 1.1rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    color: var(--color-text);
 }
 .cta-button-wrapper {
     margin-bottom: 16px;
@@ -1538,5 +1538,278 @@ h1, h2, h3, h4, .logo {
 @media (max-width: 768px) {
     .strengths-grid .strength-card {
         transition-delay: 0s !important;
+    }
+}
+
+/* ==========================================================================
+   DWC Camp Page Professional LP Styles
+   ========================================================================== */
+
+/* ページヘッダーの補正 */
+.camp-tag {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+}
+.page-header-split h1 span {
+    font-size: 1.4rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* クイックリンク（目次チップ）の横スクロール・固定・アニメーション制御 */
+.quick-links-wrapper {
+    background-color: var(--color-white);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-bg-light);
+    position: sticky;
+    top: 70px; /* ヘッダーの下に固定 */
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease-in-out; /* JSで隠す時のアニメーション */
+}
+/* JSで下スクロール時に付与されるクラス */
+.quick-links-wrapper.is-hidden {
+    transform: translateY(-150%);
+}
+.quick-links-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.btn-quick {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    border: 1px solid rgba(59, 95, 65, 0.2);
+    border-radius: 50px;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+}
+.btn-quick:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+.btn-quick-cta {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+.btn-quick-cta:hover {
+    background-color: #d67118;
+    color: var(--color-white);
+}
+
+/* 私たちの想い（Philosophy）カードスタイル */
+.philosophy-container {
+    max-width: 800px;
+}
+.philosophy-card {
+    margin-bottom: 32px;
+    background: var(--color-white);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+.philosophy-card:last-child {
+    margin-bottom: 0;
+}
+.philosophy-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+.philosophy-card.card-accent { border-left: 4px solid var(--color-accent); }
+.philosophy-card.card-primary { border-left: 4px solid var(--color-primary); }
+.philosophy-card.card-secondary { border-left: 4px solid var(--color-secondary); }
+.value-list { padding-left: 20px; }
+.value-list li { margin-bottom: 12px; color: var(--color-text); }
+.value-list li:last-child { margin-bottom: 0; }
+
+/* 中間CTA・ポリシーアラート補正 */
+.mid-cta-wrapper {
+    padding: 60px 24px;
+    background-color: var(--color-white);
+}
+.policy-alert {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+.policy-alert a {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+/* 独立した保護者説明会（Briefing）セクションのデザイン */
+.briefing-box {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--color-accent);
+}
+.briefing-box-title {
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    border-bottom: 2px dashed var(--color-bg-light);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+.warning-box {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 24px;
+    margin-bottom: 32px;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+.warning-title {
+    font-weight: bold;
+    color: #b08d00;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+.warning-box p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+.warning-highlight {
+    color: #c0392b !important;
+    font-weight: bold;
+    margin-top: 12px !important;
+    line-height: 1.6;
+}
+.insta-alert-box {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(176, 141, 0, 0.3);
+}
+.btn-insta-wide {
+    display: block;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--color-white) !important;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+.btn-insta-wide:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.briefing-content-list h4, .briefing-schedule h4 {
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.briefing-content-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 32px;
+    text-align: left;
+}
+.briefing-content-list li {
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+.briefing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+.briefing-table tr {
+    border-bottom: 1px solid var(--color-bg-light);
+}
+.briefing-table tr:last-child {
+    border-bottom: none;
+}
+.briefing-table th {
+    padding: 16px 8px;
+    text-align: left;
+    width: 25%;
+    color: var(--color-text);
+    vertical-align: top;
+}
+.briefing-table td {
+    padding: 16px 8px;
+    color: var(--color-text);
+    text-align: left;
+    line-height: 1.6;
+}
+.briefing-note {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: left;
+}
+.briefing-btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+.btn-briefing-reserve {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 1.15rem;
+    padding: 16px 48px;
+    display: inline-block;
+    border-radius: 50px;
+}
+.btn-briefing-reserve:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white) !important;
+}
+
+/* スマホ・レスポンシブ環境での目次横スクロール化 */
+@media (max-width: 768px) {
+    .quick-links-wrapper {
+        top: 60px;
+        padding: 12px 0;
+    }
+    .quick-links-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 16px;
+        /* スクロールバーを非表示にする（美しいUIのため） */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .quick-links-container::-webkit-scrollbar {
+        display: none;
+    }
+    .btn-quick {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+    .briefing-box {
+        padding: 24px 16px;
+    }
+    .briefing-table th, .briefing-table td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+    .briefing-table th {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 }

@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- スクロールアニメーションの初期化 ---
     initScrollAnimation();
+
+    // --- スマホ目次チップのスクロール隠蔽の初期化 ---
+    initSmartMenuControl();
 });
 
 // モバイルメニューの制御
@@ -209,4 +212,30 @@ function initScrollAnimation() {
 
     // 各要素を監視対象に追加
     scrollElements.forEach(el => observer.observe(el));
+}
+
+// 下スクロールで目次チップを隠し、上スクロールで表示する制御
+function initSmartMenuControl() {
+    const quickLinks = document.getElementById('quick-links');
+    if (!quickLinks) return;
+
+    let lastScrollTop = 0;
+    const delta = 5; // スクロール判定の感度調整
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // スクロール量が少ない場合は何もしない
+        if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+        
+        // 下にスクロールした場合 ＆ ある程度下にスクロールしている場合、目次を隠す
+        if (scrollTop > lastScrollTop && scrollTop > 200) {
+            quickLinks.classList.add('is-hidden');
+        } else {
+            // 上にスクロールした場合、目次を表示する
+            quickLinks.classList.remove('is-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    }, { passive: true });
 }

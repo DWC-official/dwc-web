@@ -1781,23 +1781,26 @@ h1, h2, h3, h4, .logo {
 
 /* スマホ・レスポンシブ環境での目次横スクロール化 */
 @media (max-width: 768px) {
+    /* 目次枠の被り防止と位置調整 */
     .quick-links-wrapper {
-        top: 60px;
+        top: 60px; /* スマホヘッダーの高さに合わせる */
         padding: 12px 0;
+        background-color: var(--color-white); /* 完全に不透明にする */
+        z-index: 990; /* 最前面へ（ヘッダーよりは下） */
     }
+    
+    /* 横スクロールを解除し、自然な折り返し（2行）に変更 */
     .quick-links-container {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 0 16px;
-        /* スクロールバーを非表示にする（美しいUIのため） */
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        justify-content: center;
+        flex-wrap: wrap; /* ここが重要：折り返しを許可 */
+        overflow-x: visible; /* スクロール解除 */
+        padding: 0 12px;
+        gap: 8px; /* ボタン同士の隙間を少し狭める */
     }
-    .quick-links-container::-webkit-scrollbar {
-        display: none;
-    }
+    
+    /* 以下既存の設定はそのまま */
     .btn-quick {
-        padding: 6px 16px;
+        padding: 6px 14px;
         font-size: 0.85rem;
     }
     .briefing-box {
